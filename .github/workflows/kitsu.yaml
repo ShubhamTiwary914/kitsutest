@@ -16,5 +16,5 @@ jobs:
         uses: Souvikns/kitsu@main
         with:
           provider: gemini 
-          api_key: AIzaSyDxescZNP-ndfCBaK2JDwl5uLyG7bYZrVo
+          api_key: ${{ secrets.GEMINI_APIKEY }}
           model: gemini-2.5-flash
