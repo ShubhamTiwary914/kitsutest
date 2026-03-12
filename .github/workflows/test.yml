@@ -1,0 +1,20 @@
+name: Kitsu AI Maintainer
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  run-kitsu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Kitsu Action
+        uses: Souvikns/kitsu@main
+        with:
+          provider: gemini 
+          api_key: AIzaSyDxescZNP-ndfCBaK2JDwl5uLyG7bYZrVo
+          model: gemini-2.5-flash
