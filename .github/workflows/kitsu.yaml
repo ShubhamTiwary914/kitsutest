@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [opened]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   run-kitsu:
     runs-on: ubuntu-latest
@@ -18,3 +22,4 @@ jobs:
           provider: gemini 
           api_key: ${{ secrets.GEMINI_APIKEY }}
           model: gemini-2.5-flash
+          github_token: ${{ secrets.GITHUB_TOKEN }}
