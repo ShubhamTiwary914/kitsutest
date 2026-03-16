@@ -3,7 +3,7 @@ name: Kitsu AI Maintainer
 on:
   pull_request:
     types: [opened, reopened, synchronize]
- workflow_dispatch:
+  workflow_dispatch:
     inputs:
       pr_number:
         description: "Pull request number to review"
